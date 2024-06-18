@@ -431,137 +431,68 @@ span {
     padding-top: .5rem;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.full-vh {
-    height: 100vh;
-}
-
-.d-flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-section {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.micro-cards {
+/* Container for skill cards */
+.skill-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem; /* Adjusted gap for spacing between cards */
+    padding: 1rem; /* Added padding for overall container spacing */
 }
 
-.micro-card {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    width: 120px;
-}
-
-.micro-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.full-vh {
-    height: 100vh;
-}
-
-.d-flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-section {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.micro-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.micro-card {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    width: 120px;
-}
-
-.micro-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* Individual skill card styling */
 .skill-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 10rem; /* Adjust width to control card size */
+    padding: 1rem; /* Padding within each card */
+    background-color: #000; /* Background color for cards */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transform on hover */
 }
 
-.rot {
-    transition: transform 0.3s ease;
+/* Hover effect for skill cards */
+.skill-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
+/* Icon styling within skill cards */
+.skill-card .iconify,
+.skill-card img {
+    width: 50px; /* Icon size */
+    height: 50px; /* Icon size */
+    margin-bottom: 0.5rem; /* Space between icon and text */
+}
+
+/* Text styling within skill cards */
 .skill-card span {
-    margin-top: 5px;
-    font-size: 1.3em;
-}
-.title-section {
-    font-size: 3.0em; /* Adjust the font size as needed */
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Text size */
+    font-weight: 500; /* Text weight */
+    text-align: center; /* Center text alignment */
 }
 
-.iconify {
-    display: inline-block;
+/* Responsive design adjustments using media queries */
+@media (max-width: 768px) {
+    .skill-cards {
+        gap: 0.5rem; /* Reduce gap on smaller screens */
+        padding: 0.5rem; /* Reduce padding on smaller screens */
+    }
+    .skill-card {
+        width: 8rem; /* Reduce card width on smaller screens */
+        padding: 0.5rem; /* Reduce padding within cards on smaller screens */
+    }
+    .skill-card .iconify,
+    .skill-card img {
+        width: 40px; /* Reduce icon size on smaller screens */
+        height: 40px; /* Reduce icon size on smaller screens */
+    }
+    .skill-card span {
+        font-size: 0.875rem; /* Reduce text size on smaller screens */
+    }
 }
-
-.d-flex {
-    display: flex;
-}
-
-.d-flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
 
 
 .portfolio {
