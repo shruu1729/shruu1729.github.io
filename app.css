@@ -398,7 +398,7 @@ span {
 }
 
 .education-content ul li {
-    margin-bottom: 0.8rem;            /* Space between each bullet */
+    margin-bottom: 1rem;            /* Space between each bullet */
     position: relative;             /* For custom bullet styling if needed */
 }
 
