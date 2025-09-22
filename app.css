@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -12,27 +11,18 @@
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-/* :root {
-    --bg-color: #2c3531; /* Sleek and futuristic dark green background color */
-    --second-bg-color: #095250; /* Sleek and futuristic teal background color */
-    --text-color: #d9b08c; /* Sleek and futuristic light brown text color */
-    --main-color: #ffcb9a; /* Sleek and futuristic peach accent color */
-    --hover-color: #d1e8e2; /* Sleek and futuristic light teal for hover effects */
-    --link-color: #ffcb9a; /* Sleek and futuristic peach for links */
-    --link-hover-color: #2c3531; /* Sleek and futuristic dark green for link hover */
-} */
-
 :root {
     --bg-color: #ffffff;           /* White background */
-    --second-bg-color: #f9f9f9;    /* Slightly off-white for cards/sections */
-    --text-color: #000000;          /* Black for main text and headings */
-    --main-color: #ff7f50;        /* Orange for accent headings/buttons */
-    --date-color: #888888;          /* Grey for dates and secondary text */
-    --hover-color: #ffd1a4;         /* Light orange for hover effects */
+    --second-bg-color: #f5f5f5;    /* Light grey for sections */
+    --text-color: #000000;          /* Black for main text */
+    --main-color: #ff7f50;          /* Orange for accents */
+    --date-color: #888888;          /* Grey for dates */
+    --hover-color: #ffd1a4;         /* Light orange for hover */
     --link-color: #ff7f50;          /* Orange for links */
-    --link-hover-color: #000000;    /* Black for hover on links */
+    --link-hover-color: #000000;    /* Black for link hover */
+    --card-bg: #ffffff;             /* White for cards */
+    --border-color: #e0e0e0;        /* Light grey for borders */
 }
-
 
 html {
     font-size: 62.5%;
@@ -40,12 +30,10 @@ html {
     width: 100vw;
 }
 
-
 body {
     background: var(--bg-color);
-    color: var(--text-color); /* Use CSS variable for consistency */
+    color: var(--text-color);
 }
-
 
 .header {
     position: fixed;
@@ -58,6 +46,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -96,6 +85,7 @@ section {
     align-items: center;
     padding: 0 9%;
     justify-content: space-between;
+    background: var(--bg-color);
 }
 
 .my-img { 
@@ -108,6 +98,8 @@ section {
     margin: 0 auto;
     width: 30rem;
     border-radius: 50%;
+    border: 3px solid var(--main-color);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.3);
 }
 
 .home-content {
@@ -118,23 +110,24 @@ section {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+    color: var(--text-color);
 }
 
 .home-content .text-animate {
-    
     font-size: 3.2rem;
+    color: var(--text-color);
 }
 
 .home-content .text-animate span {
     font-size: 3.2rem;
     font-weight: 700;
     color: var(--main-color);
-    /* -webkit-text-stroke: .7px var(--main-color); */
 }
 
 .home-content p {
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+    color: var(--text-color);
 }
 
 .btn-box {
@@ -166,6 +159,7 @@ section {
 
 .btn-box .btn:hover {
     color: var(--main-color);
+    background: var(--bg-color);
 } 
 
 .btn-box .btn:nth-child(2) {
@@ -175,14 +169,11 @@ section {
 
 .btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
-}
-
-.btn-box .btn:nth-child(2)::before {
     background: var(--main-color);
 }
 
 .btn-box .btn::before {
-    content: '';;
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -197,14 +188,18 @@ section {
     width: 100%;
 }
 
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color);
+}
+
 .home-sci {
-    position: relative; /* Change position to relative to align with the rest of the document flow */
-    top: 2rem; /* Adjust top to move slightly below the heading */
-    width: 100%; /* Make the width full width of the container */
+    position: relative;
+    top: 2rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 3rem;
-    margin-top: 2rem; /* Adjust margin-top for spacing */
+    margin-top: 2rem;
 }
 
 .home-sci a {
@@ -226,6 +221,7 @@ section {
 
 .home-sci a:hover {
     color: var(--bg-color);
+    background: var(--main-color);
 }
 
 .home-sci a::before {
@@ -263,6 +259,7 @@ section {
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
+    color: var(--text-color);
 }
 
 span {
@@ -273,14 +270,7 @@ span {
     position: relative;
     width: 30rem;
     height: 30rem;
-    border-radius: 50;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-img {
-    position: relative;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,8 +280,8 @@ span {
     width: 90%;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
-    position: relative; /* Ensure img is positioned relatively for overlay */
-    z-index: 1; /* Ensure the image stays on top */
+    position: relative;
+    z-index: 1;
 }
 
 .about-img .circle-spin {
@@ -307,7 +297,7 @@ span {
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--second-bg-color);
     animation: aboutCoolAnimation 5s infinite;
-    z-index: 0; /* Ensure the circle stays behind the image */
+    z-index: 0;
 }
 
 @keyframes aboutCoolAnimation {
@@ -333,18 +323,19 @@ span {
     }
 }
 
-
 .about-content {
     text-align: center;
 }
 
 .about-content h3 {
     font-size: 2.6rem;
+    color: var(--main-color);
 }
 
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    color: var(--text-color);
 }
 
 .btn-box.btns {
@@ -364,6 +355,7 @@ span {
     flex-direction: row;
     min-height: auto;
     padding-bottom: 5rem;
+    background: var(--bg-color);
 }
 
 .education .education-row {
@@ -379,6 +371,7 @@ span {
 .education-column .title {
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
+    color: var(--text-color);
 }
 
 .education-column .education-box {
@@ -400,148 +393,138 @@ span {
     background: var(--main-color);
     border-radius: 50%;
 }
-/* Education / Work List Styling */
+
 .education-content ul {
-    list-style-type: disc;          /* Standard bullets */
-    padding-left: 3rem;             /* Space from left edge */
-    margin: 1.5rem 0;               /* Space above and below the list */
-    color: var(--text-color);       /* Matches your theme */
-    font-size: 1.6rem;              /* Bigger, readable font */
-    line-height: 2.2rem;            /* More spacing between items */
+    list-style-type: disc;
+    padding-left: 3rem;
+    margin: 1.5rem 0;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 2.2rem;
 }
 
 .education-content ul li {
-    margin-bottom: 0.8rem;            /* Space between each bullet */
-    position: relative;             /* For custom bullet styling if needed */
+    margin-bottom: 0.8rem;
+    position: relative;
+    color: var(--text-color);
 }
 
-/* Optional: make bullet itself colored */
-/* .education-content ul li::marker {
-    color: var(--main-color);       /* Peach accent color */
-    font-size: 1.8rem;              /* Slightly bigger bullets */
-} */
+.education-content ul li::marker {
+    color: var(--main-color);
+}
 
-/* Optional: highlight important parts */
 .education-content ul li strong {
-    color: var(--main-color);       /* Highlights key words */
+    color: var(--main-color);
     font-weight: 600;
 }
-
 
 .education-content .content {
     position: relative;
     padding: 1.5rem;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--border-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
-}
-
-.education-content .content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
+    background: var(--bg-color);
     transition: .5s;
 }
 
-.education-content .content:hover::before {
-    width: 100%;
+.education-content .content:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.2);
 }
 
 .education-content .content .year {
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: var(--date-color);
     padding-bottom: .5rem;
 }
 
 .education-content .content .year i {
     padding-right: .5rem;
+    color: var(--date-color);
 }
 
 .education-content .content h3 {
     font-size: 2rem;
+    color: var(--text-color);
 }
 
 .education-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
+    color: var(--text-color);
 }
 
-/* Container for skill cards */
 .skill-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem; /* Adjusted gap for spacing between cards */
-    padding: 1rem; /* Added padding for overall container spacing */
+    gap: 1rem;
+    padding: 1rem;
 }
 
-/* Individual skill card styling */
 .skill-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 10rem; /* Adjust width to control card size */
-    padding: 1rem; /* Padding within each card */
-    background-color: #000; /* Background color for cards */
-    border-radius: 0.5rem; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.2s; /* Smooth transform on hover */
+    width: 10rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect for skill cards */
 .skill-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
+    border-color: var(--main-color);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.3);
 }
 
-/* Icon styling within skill cards */
 .skill-card .iconify,
 .skill-card img {
-    width: 50px; /* Icon size */
-    height: 50px; /* Icon size */
-    margin-bottom: 0.5rem; /* Space between icon and text */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
 }
 
-/* Text styling within skill cards */
 .skill-card span {
-    font-size: 1rem; /* Text size */
-    font-weight: 500; /* Text weight */
-    text-align: center; /* Center text alignment */
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-color);
 }
 
-/* Responsive design adjustments using media queries */
 @media (max-width: 768px) {
     .skill-cards {
-        gap: 0.5rem; /* Reduce gap on smaller screens */
-        padding: 0.5rem; /* Reduce padding on smaller screens */
+        gap: 0.5rem;
+        padding: 0.5rem;
     }
     .skill-card {
-        width: 8rem; /* Reduce card width on smaller screens */
-        padding: 0.5rem; /* Reduce padding within cards on smaller screens */
+        width: 8rem;
+        padding: 0.5rem;
     }
     .skill-card .iconify,
     .skill-card img {
-        width: 40px; /* Reduce icon size on smaller screens */
-        height: 40px; /* Reduce icon size on smaller screens */
+        width: 40px;
+        height: 40px;
     }
     .skill-card span {
-        font-size: 0.875rem; /* Reduce text size on smaller screens */
+        font-size: 0.875rem;
     }
 }
-
 
 .portfolio {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
 }
 
 .portfolio h2 {
     margin-bottom: 4rem;
+    color: var(--text-color);
 }
 
 .portfolio-container {
@@ -555,9 +538,10 @@ span {
 .portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem rgb(189, 127, 247);
+    box-shadow: 0 0 1rem rgba(255, 127, 80, 0.3);
     overflow: hidden;
     display: flex;
+    background: var(--bg-color);
 }
 
 .portfolio-box img {
@@ -575,7 +559,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .35), var(--second-bg-color));
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(255, 127, 80, 0.9));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -592,11 +576,13 @@ span {
 
 .portfolio-layer h4 {
     font-size: 2.25rem;
+    color: var(--bg-color);
 }
 
 .portfolio-layer p {
     font-size: 1.25rem;
     margin: .3rem 0 1rem;
+    color: var(--bg-color);
 }
 
 .project-links {
@@ -610,94 +596,93 @@ span {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color);
+    background: var(--bg-color);
     border-radius: 50%;
 }
 
 .portfolio-layer a i {
     font-size: 2rem;
-    color: var(--second-bg-color);
+    color: var(--main-color);
 }
 
-/* Research Section Styling */
 .Research {
     padding-bottom: 5rem;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.Research h2 {
+    color: var(--text-color);
+}
 
 .Research .publication {
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 2rem;
     background-color: var(--bg-color);
-    color: #fff;
     border-radius: 0.6rem;
-    border: 0.2rem solid var(--main-color);
+    border: 0.2rem solid var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    width: 80%; /* Adjust width as necessary */
-    max-width: 800px; /* Adjust max width as necessary */
-}
-.Research .publication::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color); /* Color of the hover effect */
-    transition: width 0.3s ease-in-out;
-    z-index: -1; /* Place behind the text */
+    width: 80%;
+    max-width: 800px;
+    position: relative;
 }
 
-.Research .publication:hover::before {
-    width: 100%; /* Expand to full width on hover */
-}
 .Research .publication:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.3);
+    border-color: var(--main-color);
 }
 
 .Research .publication h3 {
     font-size: 2.4rem;
-    color: #fff; /* White color for the title */
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .Research .publication p {
     font-size: 1.6rem;
-    color: #fff; /* White color for the text */
+    color: var(--text-color);
     margin-bottom: 0.5rem;
 }
 
+.Research .publication .date {
+    color: var(--date-color);
+    font-size: 1.4rem;
+}
+
 .Research .publication a {
-    color: #007bff;
+    color: var(--main-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .Research .publication a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker blue on hover */
+    color: var(--text-color);
 }
 
 .contact {
     margin-top: auto;
-   background-color: var(--second-bg-color); /* or define a new variable */
+    background-color: var(--second-bg-color);
+    padding: 5rem 9%;
 }
 
-
+.contact h2 {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
 .contact .textarea-field {
-    margin: 1rem 0; /* Adjusted margin */
-    padding: 1rem; /* Add padding to give some space around the text */
+    margin: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -705,6 +690,7 @@ span {
     font-size: 1.6rem;
     line-height: 2.2rem;
     margin-bottom: 1rem;
+    color: var(--text-color);
 }
 
 .contact .textarea-field a {
@@ -714,10 +700,9 @@ span {
     transition: color 0.3s ease;
 }
 
-
-
 .contact .textarea-field a:hover {
-    color: #e6734f; /* Slightly darker than var(--main-color) */
+    color: var(--text-color);
+    text-decoration: underline;
 }
 
 .contact .textarea-field a:focus {
@@ -734,29 +719,30 @@ span {
     padding: 1.5rem 3rem;
     font-size: 1.6rem;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--bg-color);
     background-color: var(--main-color);
     border-radius: 0.6rem;
-    border: none;
+    border: 2px solid var(--main-color);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact .btn:hover {
-    background-color: #e6734f;
+    background-color: var(--bg-color);
+    color: var(--main-color);
 }
 
-
 .footer {
-    margin-top:auto; /* Adjusted margin-top */
-    padding: 2rem 0; /* Adjusted padding */
-   background-color: var(--second-bg-color);
-    text-align: center; /* Center-align content within the footer */
+    margin-top: auto;
+    padding: 2rem 0;
+    background-color: var(--text-color);
+    text-align: center;
 }
 
 .footer-text p {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    color: var(--bg-color);
 }
 
 .footer-iconTop a {
@@ -768,11 +754,99 @@ span {
     background: var(--main-color);
     border: 0.2rem solid var(--main-color);
     border-radius: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.footer-iconTop a:hover {
+    background: var(--bg-color);
 }
 
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--bg-color);
+    transition: color 0.3s ease;
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 280px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(255, 127, 80, 0.3);
+    border-color: var(--main-color);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: var(--text-color);
+}
+
+.card p {
+    padding: 0 15px;
+    margin: 10px 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    color: var(--text-color);
+}
+
+.card .date {
+    color: var(--date-color);
+    font-size: 1.4rem;
+}
+
+.card a {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.card a:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    transform: scale(1.05);
 }
 
 @media (max-width: 1200px) {
@@ -953,93 +1027,4 @@ span {
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
-}
-
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    position: relative; /* Ensure pseudo-element is positioned relative to the card */
-    background-color:#484f4c;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-width: 280px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; /* Added border-color transition */
-    border: 2px solid transparent; /* Start with transparent border */
-}
-
-.card:hover {
-    transform: translateY(-10px); /* Lift the card slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px; /* Rounded corners for the image */
-    border: 5px solid #fff; /* Separate boundary for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow to the image */
-    transition: transform 0.2s, filter 0.2s; /* Add this line to make the image corners rounded */
-}
-
-.card:hover img {
-    transform: scale(1.05);
-    filter: brightness(70%);
-}
-
-.card h3 {
-    margin: 10px 0;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size:large;
-    color: #d9b08c;
-}
-
-.card p {
-    padding: 0 15px;
-    margin: 10px 0;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size:medium;
-    
-}
-
-.card a {
-    display: inline-block;
-    margin: 10px 0 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #ffcb9a;
-    border-radius: 5px;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.card a:hover {
-    background-color: #2c3531 ;
-    transform: scale(1.05); /* Scale up the button on hover */
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%; /* Start off-screen to the left */
-    width: 100%;
-    height: 100%;
-    background: var(--second-bg-color); /* Color of the hover effect */
-    transition: left 0.3s ease-in-out; /* Animate the left position */
-    z-index: -1; /* Place behind the text and other content */
-    pointer-events: none; /* Prevent the pseudo-element from capturing hover events */
-}
-
-.card:hover::before {
-    left: 0; /* Slide in from the left on hover */
 }
