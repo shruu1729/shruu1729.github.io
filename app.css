@@ -393,12 +393,12 @@ span {
     padding-left: 3rem;             /* Space from left edge */
     margin: 1.5rem 0;               /* Space above and below the list */
     color: var(--text-color);       /* Matches your theme */
-    font-size: 1.2rem;              /* Bigger, readable font */
+    font-size: 1.5rem;              /* Bigger, readable font */
     line-height: 2.2rem;            /* More spacing between items */
 }
 
 .education-content ul li {
-    margin-bottom: 1rem;            /* Space between each bullet */
+    margin-bottom: 0.8rem;            /* Space between each bullet */
     position: relative;             /* For custom bullet styling if needed */
 }
 
