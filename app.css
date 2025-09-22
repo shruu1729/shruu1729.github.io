@@ -387,6 +387,30 @@ span {
     background: var(--main-color);
     border-radius: 50%;
 }
+/* Education / Work / UL list styling */
+.education-content ul {
+    list-style-type: disc;       /* Keep bullet points */
+    padding-left: 2rem;          /* Space for bullets */
+    margin: 1rem 0;
+}
+
+.education-content ul li {
+    font-size: 1.6rem;           /* Larger, readable font */
+    line-height: 2rem;           /* More spacing between lines */
+    margin-bottom: 1rem;         /* Space between list items */
+    color: var(--text-color);    /* Light brown from your palette */
+    transition: color 0.3s;      /* Smooth color change on hover */
+}
+
+/* Highlight strong text */
+.education-content ul li strong {
+    color: var(--main-color);    /* Peach accent color for emphasis */
+}
+
+/* Optional hover effect for list items */
+.education-content ul li:hover {
+    color: var(--hover-color);   /* Light teal hover effect */
+}
 
 .education-content .content {
     position: relative;
