@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
 
 * {
     margin: 0;
@@ -42,9 +43,9 @@ html {
 
 body {
     background: var(--bg-color);
-    color: #fff;
-    
+    color: var(--text-color); /* Use CSS variable for consistency */
 }
+
 
 .header {
     position: fixed;
@@ -689,7 +690,7 @@ span {
 
 .contact {
     margin-top: auto;
-    background-color: var(--main-bg-color);
+   background-color: var(--second-bg-color); /* or define a new variable */
 }
 
 
@@ -713,8 +714,10 @@ span {
     transition: color 0.3s ease;
 }
 
+
+
 .contact .textarea-field a:hover {
-    color: darken(var(--main-color), 10%);
+    color: #e6734f; /* Slightly darker than var(--main-color) */
 }
 
 .contact .textarea-field a:focus {
@@ -740,13 +743,14 @@ span {
 }
 
 .contact .btn:hover {
-    background-color: darken(var(--main-color), 10%);
+    background-color: #e6734f;
 }
+
 
 .footer {
     margin-top:auto; /* Adjusted margin-top */
     padding: 2rem 0; /* Adjusted padding */
-    background-color: var(--main-bg-color);
+   background-color: var(--second-bg-color);
     text-align: center; /* Center-align content within the footer */
 }
 
