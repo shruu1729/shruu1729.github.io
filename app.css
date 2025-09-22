@@ -387,28 +387,33 @@ span {
     background: var(--main-color);
     border-radius: 50%;
 }
-/* Education / Work UL Styling */
+/* Education / Work List Styling */
 .education-content ul {
-    list-style-type: disc;       /* keep bullets */
-    padding-left: 3rem;          /* more space for bullets */
-    margin: 1.5rem 0;            /* space above/below list */
+    list-style-type: disc;          /* Standard bullets */
+    padding-left: 3rem;             /* Space from left edge */
+    margin: 1.5rem 0;               /* Space above and below the list */
+    color: var(--text-color);       /* Matches your theme */
+    font-size: 1.2rem;              /* Bigger, readable font */
+    line-height: 2.2rem;            /* More spacing between items */
 }
 
 .education-content ul li {
-    font-size: 2rem;             /* big, readable font */
-    line-height: 3rem;           /* ample spacing between items */
-    margin-bottom: 1.5rem;       /* space between points */
-    color: var(--text-color);    /* light brown from palette */
-    transition: color 0.3s;      /* smooth hover effect */
+    margin-bottom: 1rem;            /* Space between each bullet */
+    position: relative;             /* For custom bullet styling if needed */
 }
 
+/* Optional: make bullet itself colored */
+/* .education-content ul li::marker {
+    color: var(--main-color);       /* Peach accent color */
+    font-size: 1.8rem;              /* Slightly bigger bullets */
+} */
+
+/* Optional: highlight important parts */
 .education-content ul li strong {
-    color: var(--main-color);    /* peach accent for emphasis */
+    color: var(--main-color);       /* Highlights key words */
+    font-weight: 600;
 }
 
-.education-content ul li:hover {
-    color: var(--hover-color);   /* teal hover effect */
-}
 
 .education-content .content {
     position: relative;
