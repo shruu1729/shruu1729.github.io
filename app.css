@@ -735,7 +735,7 @@ span {
 .footer {
     margin-top: auto;
     padding: 2rem 0;
-    background-color: var(--text-color);
+    background-color: var(--bg-color:);
     text-align: center;
 }
 
