@@ -742,7 +742,7 @@ span {
 .footer-text p {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .footer-iconTop a {
