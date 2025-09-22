@@ -41,7 +41,7 @@ ScrollReveal().reveal('.bottom', {origin: 'bottom'})
 
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Data Scientist', 'AI/ML Enthusiast', 'Competitive  Programmer'],
+    strings: ['AI Research Engineer', ' Interested in NLP & Gen AI', 'Competitive  Programmer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
